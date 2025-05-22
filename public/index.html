@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs List</title>
+  </head>
+
+  <body>
+    <h1>Jobs List</h1>
+    <hr />
+    <p id="message"></p>
+    <hr />
+
+    <div id="logon-register" style="display: none;">
+      <button type="button" id="logon">Logon</button>
+      <button type="button" id="register">Register</button>
+    </div>
+
+    <div id="logon-div" style="display: none;">
+      <form id="logon-form" method="post" action="#">
+        <div>
+          <label for="logon-email">Email:</label>
+          <input type="email" id="logon-email" name="email" required />
+        </div>
+        <div>
+          <label for="logon-password">Password:</label>
+          <input type="password" id="logon-password" name="password" required />
+        </div>
+        <button type="button" id="logon-button">Logon</button>
+        <button type="button" id="logon-cancel">Cancel</button>
+      </form>
+    </div>
+
+    <div id="register-div" style="display: none;">
+      <form id="register-form" method="post" action="#">
+        <div>
+          <label for="register-name">Name:</label>
+          <input type="text" id="register-name" name="name" required />
+        </div>
+        <div>
+          <label for="register-email">Email:</label>
+          <input type="email" id="register-email" name="email" required />
+        </div>
+        <div>
+          <label for="register-password">Password:</label>
+          <input type="password" id="register-password" name="password" required />
+        </div>
+        <div>
+          <label for="register-password2">Verify Password:</label>
+          <input type="password" id="register-password2" name="verify-password" required />
+        </div>
+        <button type="button" id="register-button">Register</button>
+        <button type="button" id="register-cancel">Cancel</button>
+      </form>
+    </div>
+
+    <div id="jobs" style="display: none;">
+      <p id="jobs-message"></p>
+      <table id="jobs-table">
+        <thead>
+          <tr id="jobs-table-header">
+            <th>Company</th>
+            <th>Position</th>
+            <th>Status</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+      <button type="button" id="add-job">Add Job</button>
+      <button type="button" id="logoff">Log Off</button>
+    </div>
+
+    <div id="edit-job" style="display: none;">
+      <form id="edit-job-form" method="post" action="#">
+        <div>
+          <label for="company">Company:</label>
+          <input type="text" id="company" name="company" required />
+        </div>
+        <div>
+          <label for="position">Position:</label>
+          <input type="text" id="position" name="position" required />
+        </div>
+        <div>
+          <label for="status">Status:</label>
+          <select id="status" name="status">
+            <option value="pending">Pending</option>
+            <option value="interview">Interview</option>
+            <option value="declined">Declined</option>
+          </select>
+        </div>
+        <button type="button" id="adding-job">Add</button>
+        <button type="button" id="edit-cancel">Cancel</button>
+      </form>
+    </div>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
